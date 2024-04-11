@@ -25,3 +25,10 @@ Product.create!(
   image_url: "",
   price: 19.95,
 )
+
+Product.create!(
+  title: "Master Ruby on Rails",
+  description: "From beginner to professional for Ruby on Rails!",
+  image_url: "",
+  price: 28.88,
+)
