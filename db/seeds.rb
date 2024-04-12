@@ -8,7 +8,7 @@
 Product.delete_all
 
 Product.create!(
-  title: "Build Rails Web Applications",
+  title: "Programming Ruby",
   description: %{
         <p>
         <em>Robust, Reliable, and Resilient</em>
@@ -22,13 +22,20 @@ Product.create!(
         right away.
         </p>
     },
-  image_url: "",
+  image_url: "ruby.jpg",
   price: 19.95,
 )
 
 Product.create!(
-  title: "Master Ruby on Rails",
+  title: "Docker for Rails Developers",
   description: "From beginner to professional for Ruby on Rails!",
-  image_url: "",
+  image_url: "ridocker.jpg",
   price: 28.88,
+)
+
+Product.create!(
+  title: "Master Tailwind Css",
+  description: "Learn how to use tailwind css to quickly build web pages",
+  image_url: "tailwind.jpg",
+  price: 21.99
 )
