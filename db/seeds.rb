@@ -37,5 +37,5 @@ Product.create!(
   title: "Master Tailwind Css",
   description: "Learn how to use tailwind css to quickly build web pages",
   image_url: "tailwind.jpg",
-  price: 21.99
+  price: 21.99,
 )
