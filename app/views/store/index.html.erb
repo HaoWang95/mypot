@@ -9,22 +9,27 @@
   <h1 class="font-bold text-lg mb-6 pb-2 border-b-2">Books catalog</h1>
 
   <ul>
-    <% @products.each do |product| %>
-      <li class="flex mb-6">
-        <%= image_tag(product.image_url, class: "object-contain shadow mr-6 w-40 h-50") %>
-        <div>
-          <h2 class="font-bold mb-3 text-lg">
-            <%= product.title %>
-          </h2>
-          <p>
-            <%= sanitize(product.description) %>
-          </p>
+    <% cache @products do %>
+      <% @products.each do |product| %>
+        <% cache product do %>
+          <li class="flex mb-6">
+            <%= image_tag(product.image_url, class: "object-contain shadow mr-6 w-40 h-50") %>
+            <div>
+              <h2 class="font-bold mb-3 text-lg">
+                <%= product.title %>
+              </h2>
+              <p>
+                <%= sanitize(product.description) %>
+              </p>
 
-          <div class="mb-3">
-            <%= product.price %>
-          </div>
-        </div>
-      </li>
+              <div class="mb-3">
+                <!-- number_to_currency is a built in rails helper function -->
+                <%= number_to_currency(product.price) %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
     <% end %>
   </ul>
     

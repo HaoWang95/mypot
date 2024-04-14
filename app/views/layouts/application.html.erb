@@ -12,8 +12,34 @@
   </head>
 
   <body>
+    <header class="bg-green-600">
+      <%= image_tag "logo.svg", alt: "Rails book store" %>
+      <h1>
+        <% if @page_title != nil %> 
+          <%= @page_title %>
+        <% end %>
+      </h1>
+    </header>
+    <section class="flex">
+      <nav class="bg-green-700 p-7">
+        <ul class="text-gray-300 leading-10">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/questions">Questions</a>
+          </li>
+          <li>
+            <a href="/news">News</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
     <main class="container mx-auto mt-10 px-5 flex">
       <%= yield %>
     </main>
+    </section>
   </body>
 </html>
