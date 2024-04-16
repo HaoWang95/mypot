@@ -57,6 +57,10 @@ class CartsController < ApplicationController
     end
   end
 
+  def destroy_all
+    Cart.destroy_all
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

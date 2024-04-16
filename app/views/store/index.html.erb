@@ -39,4 +39,5 @@
     
 
   <p>Test products length: <%= @products.length %></p>
+  <p>This page has been accessed for <%= pluralize(session[:view_count], "time") %></p>
 </div>
